@@ -21,9 +21,11 @@ public class Cow extends Mammal {
 		this.setMaintenanceCost(4.5);
 		this.setDangerPerc(0.0);
 	}
-	
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,Constants.Animals.Mammals.COW);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+				Constants.Animals.Mammals.COW);
 	}
 }

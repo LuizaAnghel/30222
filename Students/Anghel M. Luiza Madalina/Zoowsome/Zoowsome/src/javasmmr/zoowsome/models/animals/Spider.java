@@ -7,12 +7,12 @@ import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 public class Spider extends Insect {
-	
+
 	public Spider(int legs, String name) {
 		this.setNrOfLegs(legs);
 		this.setName(name);
 	}
-	
+
 	public Spider() {
 		this.setNrOfLegs(8);
 		this.setName("Spider");
@@ -21,9 +21,11 @@ public class Spider extends Insect {
 		this.setMaintenanceCost(2.5);
 		this.setDangerPerc(0.5);
 	}
-	
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,Constants.Animals.Insects.SPIDER);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+				Constants.Animals.Insects.SPIDER);
 	}
 }

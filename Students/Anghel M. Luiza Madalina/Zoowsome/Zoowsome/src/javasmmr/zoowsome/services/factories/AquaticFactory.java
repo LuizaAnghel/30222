@@ -8,7 +8,7 @@ import javasmmr.zoowsome.models.animals.Dolphin;
 public class AquaticFactory extends SpeciesFactory {
 
 	@Override
-	public Animal getAnimal(String type) throws Exception{
+	public Animal getAnimal(String type) throws Exception {
 		if (Constants.Animals.Aquatics.SHARK.equals(type)) {
 			return new Shark(); // leave empty constructor, for now!
 		} else if (Constants.Animals.Aquatics.SEAL.equals(type)) {

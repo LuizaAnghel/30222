@@ -7,12 +7,12 @@ import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 public class Penguin extends Bird {
-	
+
 	public Penguin(int legs, String name) {
 		this.setNrOfLegs(legs);
 		this.setName(name);
 	}
-	
+
 	public Penguin() {
 		this.setNrOfLegs(2);
 		this.setName("Penguin");
@@ -21,10 +21,12 @@ public class Penguin extends Bird {
 		this.setMaintenanceCost(6.5);
 		this.setDangerPerc(0.0);
 	}
-	
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,Constants.Animals.Birds.PENGUIN);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+				Constants.Animals.Birds.PENGUIN);
 	}
 
 }

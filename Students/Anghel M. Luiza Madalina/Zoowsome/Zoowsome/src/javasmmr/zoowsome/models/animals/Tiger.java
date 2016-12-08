@@ -7,11 +7,12 @@ import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 public class Tiger extends Mammal {
-	
+
 	public Tiger(int legs, String name) {
 		this.setNrOfLegs(legs);
 		this.setName(name);
 	}
+
 	public Tiger() {
 		this.setNrOfLegs(4);
 		this.setName("Tiger");
@@ -20,9 +21,11 @@ public class Tiger extends Mammal {
 		this.setMaintenanceCost(3.2);
 		this.setDangerPerc(0.8);
 	}
-	
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,Constants.Animals.Mammals.TIGER);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+				Constants.Animals.Mammals.TIGER);
 	}
 }

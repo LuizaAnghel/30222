@@ -6,14 +6,13 @@ import javasmmr.zoowsome.services.factories.Constants;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
-
 public class Eagle extends Bird {
-	
+
 	public Eagle(int legs, String name) {
 		this.setNrOfLegs(legs);
 		this.setName(name);
 	}
-	
+
 	public Eagle() {
 		this.setNrOfLegs(2);
 		this.setName("Eagle");
@@ -22,9 +21,11 @@ public class Eagle extends Bird {
 		this.setMaintenanceCost(5.3);
 		this.setDangerPerc(0.4);
 	}
-	
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,Constants.Animals.Birds.EAGLE);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+				Constants.Animals.Birds.EAGLE);
 	}
 }

@@ -14,7 +14,11 @@ import javasmmr.zoowsome.services.factories.Constants;
 
 public class Caretaker extends Employee {
 
-	Double workingHours;
+	private Double workingHours;
+
+	public Caretaker() {
+		this("Employee", BigDecimal.ZERO, false, 8.0);
+	}
 
 	public Double getWorkingHours() {
 		return this.workingHours;
@@ -31,10 +35,6 @@ public class Caretaker extends Employee {
 		this.setSalary(salary);
 		this.setIsDead(isDead);
 		this.setWorkingHours(workingHours);
-	}
-
-	public Caretaker() {
-		this("Employee", BigDecimal.ZERO, false, 8.0);
 	}
 
 	public String takeCareOf(Animal animal) {

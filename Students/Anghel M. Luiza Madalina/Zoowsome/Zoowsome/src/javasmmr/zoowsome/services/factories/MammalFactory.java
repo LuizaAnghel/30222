@@ -13,11 +13,10 @@ public class MammalFactory extends SpeciesFactory {
 			return new Tiger(); // leave empty constructor, for now!
 		} else if (Constants.Animals.Mammals.MONKEY.equals(type)) {
 			return new Monkey();
-		}else if (Constants.Animals.Mammals.COW.equals(type)) {
-				return new Cow();
+		} else if (Constants.Animals.Mammals.COW.equals(type)) {
+			return new Cow();
 		} else {
 			throw new Exception("Invalid animal exception!");
 		}
 	}
 }
-

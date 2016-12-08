@@ -1,7 +1,5 @@
 package javasmmr.zoowsome.models.animals;
 
-import java.util.Random;
-
 import javasmmr.zoowsome.services.factories.Constants;
 
 import javax.xml.stream.XMLEventWriter;
@@ -25,18 +23,10 @@ public class Butterfly extends Insect {
 		this.setDangerPerc(0.0);
 	}
 
-	@Override
-	public boolean kill() {
-		Random random = new Random();
-		int i = random.nextInt(1);
-		if (i < this.getDangerPerc()) {
-			return true;
-		} else
-			return false;
-	}
-
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,Constants.Animals.Insects.BUTTERFLY);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+				Constants.Animals.Insects.BUTTERFLY);
 	}
 }

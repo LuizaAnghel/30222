@@ -7,12 +7,12 @@ import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 public class Flamingo extends Bird {
-	
+
 	public Flamingo(int legs, String name) {
 		this.setNrOfLegs(legs);
 		this.setName(name);
 	}
-	
+
 	public Flamingo() {
 		this.setNrOfLegs(2);
 		this.setName("Flamingo");
@@ -21,9 +21,11 @@ public class Flamingo extends Bird {
 		this.setMaintenanceCost(7.5);
 		this.setDangerPerc(0.0);
 	}
-	
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,Constants.Animals.Birds.FLAMINGO);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+				Constants.Animals.Birds.FLAMINGO);
 	}
 }

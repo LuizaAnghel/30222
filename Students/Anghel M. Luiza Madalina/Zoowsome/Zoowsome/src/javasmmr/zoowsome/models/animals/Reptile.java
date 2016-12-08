@@ -8,7 +8,7 @@ import javax.xml.stream.XMLStreamException;
 import org.w3c.dom.Element;
 
 public abstract class Reptile extends Animal {
-	boolean laysEggs;
+	private boolean laysEggs;
 
 	public boolean getLaysEggs() {
 		return this.laysEggs;
@@ -18,12 +18,14 @@ public abstract class Reptile extends Animal {
 		this.laysEggs = laysEggs;
 	}
 
-	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+	public void encodeToXml(XMLEventWriter eventWriter)
+			throws XMLStreamException {
 		super.encodeToXml(eventWriter);
 		createNode(eventWriter, "laysEggs", String.valueOf(getLaysEggs()));
 	}
-	
+
 	public void decodeFromXml(Element element) {
-		setTakenCareOf(Boolean.valueOf(element.getElementsByTagName("laysEggs").item(0).getTextContent()));
+		setTakenCareOf(Boolean.valueOf(element.getElementsByTagName("laysEggs")
+				.item(0).getTextContent()));
 	}
 }

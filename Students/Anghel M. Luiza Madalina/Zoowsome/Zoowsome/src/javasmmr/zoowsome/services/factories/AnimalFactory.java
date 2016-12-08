@@ -1,7 +1,7 @@
 package javasmmr.zoowsome.services.factories;
 
 public class AnimalFactory {
-	
+
 	public SpeciesFactory getSpeciesFactory(String type) throws Exception {
 		if (Constants.Species.MAMMALS.equals(type)) {
 			return new MammalFactory();
@@ -15,5 +15,5 @@ public class AnimalFactory {
 			return new AquaticFactory();
 		} else
 			throw new Exception("Invalid species exception");
-		}
+	}
 }

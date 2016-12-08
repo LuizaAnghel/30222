@@ -13,8 +13,8 @@ public class InsectFactory extends SpeciesFactory {
 			return new Butterfly(); // leave empty constructor, for now!
 		} else if (Constants.Animals.Insects.SPIDER.equals(type)) {
 			return new Spider();
-		}else if (Constants.Animals.Insects.COCKROACH.equals(type)) {
-				return new Cockroach();
+		} else if (Constants.Animals.Insects.COCKROACH.equals(type)) {
+			return new Cockroach();
 		} else {
 			throw new Exception("Invalid animal exception!");
 		}
